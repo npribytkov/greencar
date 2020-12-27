@@ -245,6 +245,17 @@ header .buttons .map{
 .section-car-model .car-models::-webkit-scrollbar-track-piece {
     background-color: #e5e5e5;
 }
+.custom-scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #0b9444;
+}
+.custom-scroll::-webkit-scrollbar-track-piece {
+    background-color: #e5e5e5;
+}
 .section-form{
 
     padding: 80px 0 55px 0;
@@ -338,6 +349,7 @@ header .buttons .map{
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    background-color: #fff;
 }
 .special-offers-list .special-offers-item .img{
     max-width: 380px;
@@ -628,7 +640,7 @@ svg:not(:root).svg-inline--fa {
 }
 @media (max-width: 1320px) {
     .wrapper{
-        padding: 15px;
+        padding: 0 15px;
     }
 }
 @media (max-width: 1300px) {
@@ -806,5 +818,484 @@ svg:not(:root).svg-inline--fa {
     .featured-list .featured-item img{
         width: 100%;
         height: auto;
+    }
+}
+
+
+/*car detail*/
+.breadcrumb{
+    margin: 50px 0;
+}
+.breadcrumb ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.breadcrumb ul li{
+    margin: 3px;
+}
+.breadcrumb ul li:first-child{
+    margin-left: 0;
+}
+.breadcrumb ul li:last-child{
+    margin-right: 0;
+}
+.breadcrumb ul li,
+.breadcrumb ul li a{
+    text-transform: uppercase;
+    color: #848485;
+    font-size: 12px;
+    text-decoration: none;
+}
+.detail-card .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.detail-card .wrapper .left-block{
+    width: 60%;
+    margin-top: 15px;
+}
+.detail-card .wrapper .right-block{
+    width: 40%;
+    padding-left: 30px;
+    height: auto;
+}
+.detail-card .wrapper .right-block .child-block{
+    height: 100%;
+    padding: 25px;
+    background-color: #f2f2f2;
+}
+.detail-card .wrapper .right-block .child-block .top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.detail-card .wrapper .right-block .child-block .top .vin{
+    width: 100%;
+    margin-top: 20px;
+    color: #777676;
+    font-size: 14px;
+}
+.detail-card .wrapper .right-block .child-block .top .year,
+.detail-card .wrapper .right-block .child-block .top .name{
+    color: #303030;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.detail-card .wrapper .right-block .child-block .top .year{
+    margin-left: 15px;
+}
+.detail-card .wrapper .right-block .child-block .props{
+    margin: 40px 0;
+
+}
+.detail-card .wrapper .right-block .child-block .props ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.detail-card .wrapper .right-block .child-block .props ul li{
+    color: #020202;
+    margin-bottom: 20px;
+    position: relative;
+}
+.detail-card .wrapper .right-block .child-block .props ul li:before{
+    content: '';
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding-right: 15px;
+    width: 18px;
+}
+.detail-card .wrapper .right-block .child-block .props ul li.body:before{
+    background-image: url("../img/detail-car/ico-prop-body.png");
+    height: 12px;
+}
+.detail-card .wrapper .right-block .child-block .props ul li.equipment:before{
+    background-image: url("../img/detail-car/ico-prop-equipment.png");
+    height: 18px;
+}
+.detail-card .wrapper .right-block .child-block .props ul li.engine:before{
+    background-image: url("../img/detail-car/ico-prop-engine.png");
+    height: 12px;
+}
+.detail-card .wrapper .right-block .child-block .props ul li.box:before{
+    background-image: url("../img/detail-car/ico-prop-box.png");
+    height: 12px;
+}
+.detail-card .wrapper .right-block .child-block .props ul li.drive:before{
+    background-image: url("../img/detail-car/ico-prop-drive.png");
+    height: 13px;
+}
+.detail-card .wrapper .right-block .child-block .props ul li.color:before{
+    background-image: url("../img/detail-car/ico-prop-color.png");
+    height: 13px;
+}
+
+.detail-card .wrapper .right-block .child-block .props ul li:last-child{
+    margin-bottom: 0;
+}
+.detail-card .wrapper .right-block .child-block .bottom ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.detail-card .wrapper .right-block .child-block .bottom ul li:first-child{
+    padding-top: 0;
+}
+.detail-card .wrapper .right-block .child-block .bottom ul li{
+    border-bottom: 1px solid #aaaaaa;
+    padding: 20px 0;
+}
+.detail-card .wrapper .right-block .child-block .bottom ul li.ico{
+    position: relative;
+    display: flex;
+}
+.detail-card .wrapper .right-block .child-block .bottom ul li.ico:before{
+    content: '';
+    background-image: url("../img/detail-car/ico-select-buy.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    padding-left: 15px;
+}
+.detail-card .wrapper .right-block .child-block .bottom ul li .name{
+    font-size: 14px;
+    color: #303030;
+    margin-bottom: 2px;
+}
+.detail-card .wrapper .right-block .child-block .bottom ul li a{
+    font-size: 16px;
+    color: #0b9446;
+}
+.detail-card .wrapper .right-block .child-block .bottom .price{
+    font-size: 36px;
+    color: #0b9446;
+    font-weight: 500;
+
+}
+.detail-card .wrapper .right-block .child-block .buttons{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.detail-card .wrapper .right-block .child-block .buttons a.btn{
+    margin-top: 15px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0000ff;
+    width: 90%;
+    padding: 13px 0;
+}
+.detail-card .wrapper .tabs{
+    width: 100%;
+    margin-top: 60px;
+}
+.detail-card .wrapper .tabs ul.head{
+    position: relative;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 25px;
+}
+.detail-card .wrapper .tabs ul.head:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #d3d5d4;
+    z-index: -1;
+}
+.detail-card .wrapper .tabs ul.head a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #5d5f5e;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+.detail-card .wrapper .tabs ul.head li.active{
+    border-bottom: 4px solid #0b9446;
+}
+.detail-card .wrapper .tabs ul.head li:first-child a{
+    padding-left: 0;
+}
+.detail-card .wrapper .tabs ul.head li{
+    margin-right: 40px;
+
+}
+.detail-card .wrapper .tabs .content-tabs .tab{
+    display: none;
+    position: relative;
+    color: #5b5b5b;
+    font-size: 14px;
+}
+
+.detail-card .wrapper .tabs .content-tabs .tab.active{
+    display: block;
+}
+.detail-card .wrapper .tabs .content-tabs .tab.big{
+    height: 250px;
+    overflow: hidden;
+}
+.detail-card .wrapper .tabs .content-tabs .tab .more-block{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 18px;
+    background-color: #fff;
+    border-top: 2px solid #aaaaaa;
+}
+.detail-card .wrapper .tabs .content-tabs .tab .more-block a{
+    position: relative;
+    top: -16px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border: 1px solid #aaaaaa;
+    color: #0b9446;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 30px;
+    transform: rotate(90deg);
+}
+.detail-card .wrapper .tabs .content-tabs .tab.props.active{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.detail-card .wrapper .tabs .content-tabs .tab.props ul{
+    list-style: none;
+    padding: 0;
+    flex:1 1 calc(33.33% - 30px);
+    margin:10px;
+    min-width: 400px;
+}
+.detail-card .wrapper .tabs .content-tabs .tab.props li.prop{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    position: relative;
+}
+.detail-card .wrapper .tabs .content-tabs .tab.props li.prop:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px dotted;
+    bottom: 0;
+    z-index: -1;
+}
+.detail-card .wrapper .tabs .content-tabs .tab.props li.prop .name,
+.detail-card .wrapper .tabs .content-tabs .tab.props li.prop .value{
+    border-bottom: 1px solid #fff;
+    line-height: 0.5;
+}
+.detail-card .wrapper .tabs .content-tabs .tab.props li.prop .name{
+    padding-right: 5px;
+}
+.detail-card .wrapper .tabs .content-tabs .tab.props li.prop .value{
+    padding-left: 5px;
+}
+.detail-card .wrapper .tabs .content-tabs .tab.props li.name{
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.section-similar .wrapper{
+    overflow: hidden;
+}
+.section-similar .similar-list{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 15px;
+}
+.section-similar .similar-list .similar-item{
+    flex: 0 0 386px;
+    border: 1px solid #000;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-right: 70px;
+    box-shadow: 0px 4px 4px 0px rgba(172, 171, 172, 0.75);
+    background-color: #fff;
+}
+.section-similar .similar-list .similar-item .top{
+    padding: 15px;
+}
+.section-similar .similar-list .similar-item .top .img{
+    margin: 50px 0;
+}
+.section-similar .similar-list .similar-item .top img{
+    max-width: 100%;
+}
+.section-similar .similar-list .similar-item .top .name{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.section-similar .similar-list .similar-item .bottom{
+    color: #fff;
+    background-color: #0b9446;
+    padding: 15px;
+}
+.section-similar .similar-list .similar-item .bottom .price{
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.section-similar .similar-list .similar-item .bottom a{
+    color: #fff;
+    font-size: 20px;
+}
+.section-form-car{
+    margin: 120px 0;
+}
+.section-form-car .wrapper{
+    display: flex;
+}
+.section-form-car .wrapper .left-block img{
+    position: relative;
+    right: -50px;
+    top: 50px;
+}
+.section-form-car .wrapper .right-block .form-block{
+    position: relative;
+    width: 415px;
+    margin-left: 120px;
+}
+.section-form-car .wrapper .right-block .form-block:before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background-image: url("../img/detail-car/form-car-bg.png");
+    width: 680px;
+    height: 318px;
+    top: -45px;
+    left: -150px;
+    z-index: -1;
+}
+.section-form-car .wrapper .right-block .title{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #363636;
+    margin-bottom: 10px;
+}
+.section-form-car .wrapper .right-block .desc{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #b3b1b1;
+    margin-bottom: 20px;
+}
+.section-form-car .wrapper .right-block .form-block input{
+    width: 100%;
+    font-size: 16px;
+    padding: 15px;
+    outline: none;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 4px 0px rgba(181, 180, 180, 0.75);
+}
+.section-form-car .wrapper .right-block .form-block input[type=text]{
+    border-radius: 0;
+    border: 1px solid #7d7d7d;
+
+}
+.section-form-car .wrapper .right-block .form-block input[type=submit]{
+    background-color: #002ab4;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+.bg-section-car-page{
+    background-image: url("../img/detail-car/bg-section.png");
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.bg-section-car-page h2{
+    margin-top: 0;
+}
+@media (max-width: 1300px) {
+    .section-form-car .wrapper .right-block .form-block:before{
+        left: -221px;
+    }
+    .section-similar .similar-list .similar-item{
+        margin-right: 50px;
+    }
+}
+@media (max-width: 1242px) {
+    .section-form-car .wrapper .right-block .form-block:before{
+        left: -221px;
+    }
+    .section-form-car .wrapper .left-block img{
+        width: 100%;
+        right: 0;
+    }
+    .section-form-car .wrapper .right-block .form-block{
+        margin-left: 15px;
+    }
+}
+@media (max-width: 1142px) {
+
+    .section-form-car .wrapper .left-block{
+        width: 500px;
+    }
+    .section-form-car .wrapper .left-block img{
+        top: 100px;
+    }
+    .section-form-car .wrapper{
+        justify-content: center;
+    }
+}
+@media (max-width: 900px) {
+    .detail-card .wrapper .right-block,
+    .detail-card .wrapper .left-block{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .section-form-car .wrapper .right-block .form-block:before{
+        content: none;
+    }
+    .section-form-car .wrapper{
+        flex-flow: column;
+        align-items: center;
+    }
+    .section-form-car .wrapper .left-block img{
+        top: auto;
+        right: auto;
+    }
+    .section-form-car{
+        margin: 50px 0;
+    }
+    .section-form-car .wrapper .right-block .form-block{
+        margin: 0;
+        text-align: center;
+    }
+    .section-form-car .wrapper .left-block{
+        width: 90%;
+    }
+}
+@media (max-width: 450px) {
+    .section-form-car .wrapper .right-block .form-block{
+        width: 100%;
+    }
+    .section-similar .similar-list .similar-item{
+        flex: 0 0 300px;
+    }
+    .section-similar .similar-list .similar-item .bottom .price{
+        font-size: 20px;
+    }
+    .section-similar .similar-list .similar-item .bottom a{
+        font-size: 16px;
     }
 }
