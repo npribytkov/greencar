@@ -78,3 +78,9 @@ function  loadSliderCarDetail(){
         thumbheight : trumbHeight,
     });
 }
+
+/*car list*/
+$('.slider-img').slick({
+    dots: true,
+    arrows: false
+});
