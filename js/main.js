@@ -19,11 +19,19 @@ $(document).on("click", ".mobile_menu", function(e) {
     $(".mobile_menu_container").addClass("loaded");
     $(".mobile_menu_overlay").fadeIn();
 });
+$(document).on("click", ".mobile-filter", function(e) {
+    e.preventDefault();
+    $(".filter-block-container").addClass("loaded");
+    $(".mobile_menu_overlay").fadeIn();
+});
 $(document).on("click", ".mobile_menu_overlay", function(e) {
     $(".mobile_menu_container").removeClass("loaded");
+    $(".filter-block-container").removeClass("loaded");
     $(this).fadeOut(function() {
         $(".mobile_menu_container .loaded").removeClass("loaded");
         $(".mobile_menu_container .activity").removeClass("activity");
+        $(".filter-block-container .loaded").removeClass("loaded");
+        $(".filter-block-container .activity").removeClass("activity");
     });
 });
 
